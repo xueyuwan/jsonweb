@@ -7,11 +7,11 @@
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="keywords" content="{{default.keywords}}">
-    <meta name="subject" content=",图形创意,游戏,UI,app,交互设计，品牌设计,网站设计,平面设计,策略传播,logo设计,网站定制">
-    <meta name="description" content="海江,海互动,图形创意,游戏,UI,app,交互设计，品牌设计,网站设计,平面设计,策略传播,logo设计,网站定制">
-    <meta name="author" content="seakong.cn">
+    <meta name="copyright" content="{{default.copyright}}">
+    <meta name="description" content="{{default.description}}">
+    <meta name="author" content="{{default.website}}">
 
-    <title>海互动-SEA INTERACTIO</title>
+    <title>{{title}}</title>
 
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,34 +30,25 @@
     <link rel="stylesheet" href="index_files/flexslider.css">
     <link rel="stylesheet" href="index_files/animate.css">
     <link rel="stylesheet" href="index_files/supersized.css" media="screen">
-
     <!-- Add custom CSS here -->
     <link href="index_files/custom.css" rel="stylesheet">
-
     <!--[if lt IE 9]>
     <script src="./js/html5shiv.js"></script>
     <script src="./js/respond.js"></script>
     <![endif]-->
-
-
     <!--自定义的js-->
     <script src="lib/ionic.bundle.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/route.js"></script>
     <script src="js/controller.js"></script>
-
 </head>
-<body ng-controller="allCtrl" >
+<body ng-controller="allCtrl">
 
-
+<!--navbar-->
 <div ng-include="customer.navbar.templateUrl"></div>
-
-    <div ng-repeat="pageComponent in $root.currentPage.pageComponents">
-            <div ng-include="pageComponent.templateUrl" ng-init="myData = pageComponent" >
-            </div>
-        </div>
-
-
+<!--pages-->
+<div ui-view=""></div>
+<!--footbar-->
 <div ng-include="customer.footbar.templateUrl" ></div>
 
 

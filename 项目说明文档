@@ -1,0 +1,3 @@
+#数据编写
+www/data目录下,分为wan,yang不同的工作提交内容,core为最全面的default.js,customer.js,article.js,image.js
+其中含有各个组件最全面的用法和注释,后期有可能会拆分成多个页面

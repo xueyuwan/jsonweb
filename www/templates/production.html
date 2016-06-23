@@ -1,0 +1,4 @@
+<div ng-repeat="pageComponent in customer.pages.production.pageComponents">
+    <div ng-include="pageComponent.templateUrl" ng-init="myData = pageComponent" >
+    </div>
+</div>

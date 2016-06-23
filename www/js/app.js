@@ -3,14 +3,16 @@ var config = {
     serverUrl:"",
     $http:undefined
 };
+//调试对象
+var rootScope;
 
 
 angular.module('app', ['ionic','app.route','app.controller'])
-
     .config(['$ionicConfigProvider', function($ionicConfigProvider) {
         $ionicConfigProvider.tabs.position('bottom'); // other values: top
     }])
     .run(function($ionicPlatform, $http,$rootScope) {
+        root = $rootScope;
         //初始化页面参数
         $http.get(config.localUrl+'default.json').then(function(rtn){
            $rootScope.default = rtn.data;
@@ -24,10 +26,7 @@ angular.module('app', ['ionic','app.route','app.controller'])
         $http.get(config.localUrl+'image.json').then(function(rtn){
             $rootScope.image = rtn.data;
         });
-
         config.$http= $http;
-
-
         var url = "";
         if (ionic.Platform.isAndroid()) {
             url = "/android_asset/www/";

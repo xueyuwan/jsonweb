@@ -7,6 +7,7 @@ customer.json中定义
   "navbarColor":"white"//导航背景颜色 默认黑色
     "fontcolor":"black"   //字体暗色 默认白色
     navbarImage:"url()"  //导航的背景图片 默认没有
+
 -->
 
 <header>
@@ -25,21 +26,19 @@ customer.json中定义
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="page-scroll active">
-                        <a href ui-sref="index" style="color:{{customer.navbar.fontColor || 'white' }}">About</a>
+                        <a href ui-sref="index" style="color:{{customer.navbar.fontColor || 'white' }}">主页</a>
+                    </li>
+
+                    <li class="page-scroll">
+                        <a href ui-sref="production" style="color:{{customer.navbar.fontColor || 'white' }}">产品</a>
                     </li>
                     <li class="page-scroll">
-                        <a href ui-sref="about" style="color:{{customer.navbar.fontColor || 'white' }}">Team</a>
+                        <a href ui-sref="about"  style="color:{{customer.navbar.fontColor||'white'}}">关于</a>
                     </li>
                     <li class="page-scroll">
-                        <a href ui-sref="contact" style="color:{{customer.navbar.fontColor || 'white' }}">Services</a>
+                        <a href ui-sref="contact" style="color:{{customer.navbar.fontColor || 'white' }}">联系</a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#portfolio" style="color:{{customer.navbar.fontColor || 'white' }}">portfolio</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#testimonials" style="color:{{customer.navbar.fontColor || 'white' }}">Client</a>
-                    </li>
-                    <li class="page-scroll"> <a href="https://www.behance.net/seakong" target="_blank" style="color:{{customer.navbar.fontColor || 'white' }}">Behance</a> </li>
+                    <li class="page-scroll"> <a href="" target="_blank" style="color:{{customer.navbar.fontColor || 'white' }}">旅烨</a> </li>
                     <li class="page-scroll" style="color:{{customer.navbar.fontColor || 'white' }}">
                         <a href="#contact">Contact</a>
                     </li>
