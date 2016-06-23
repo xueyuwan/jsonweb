@@ -1,15 +1,16 @@
 angular.module('app.route', [])
     .config(function($stateProvider, $urlRouterProvider) {
-
         $stateProvider
             .state('index',{
                 url:'/index',
-                templateUrl:'templates/inde1.html',
-              controller:'indexCtrl'
-    })
-            .state('about', {
+                templateUrl:'app.html',
+              controller:'allCtrl'
+        }).state('about', {
                 url: '/about',
-                templateUrl:"templates/about.html"
-            });
+                controller:"allCtrl"
+            }).state('contact',{
+            url:"/contact",
+            controller:"allCtrl"
+        });
         $urlRouterProvider.otherwise("/index");
     });

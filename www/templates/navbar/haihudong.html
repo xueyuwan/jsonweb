@@ -25,13 +25,13 @@ customer.json中定义
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="page-scroll active">
-                        <a href="#home" style="color:{{customer.navbar.fontColor || 'white' }}">About</a>
+                        <a href ui-sref="index" style="color:{{customer.navbar.fontColor || 'white' }}">About</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#team" style="color:{{customer.navbar.fontColor || 'white' }}">Team</a>
+                        <a href ui-sref="about" style="color:{{customer.navbar.fontColor || 'white' }}">Team</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#services" style="color:{{customer.navbar.fontColor || 'white' }}">Services</a>
+                        <a href ui-sref="contact" style="color:{{customer.navbar.fontColor || 'white' }}">Services</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#portfolio" style="color:{{customer.navbar.fontColor || 'white' }}">portfolio</a>

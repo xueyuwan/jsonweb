@@ -47,30 +47,19 @@
     <script src="js/controller.js"></script>
 
 </head>
-<body  id="page-top"  data-spy="scroll" data-target=".navbar-custom" onload="$('#num').val(1);">
+<body ng-controller="allCtrl" >
 
-<a href ui-sref="index" style="color:white">主页</a>
-<a href ui-sref="about">关于</a>
-<!--Navbar-->
+
 <div ng-include="customer.navbar.templateUrl"></div>
 
-<!--嵌套分层模板-->
-<div  ng-include="'templates/index.html'"></div>
+    <div ng-repeat="pageComponent in $root.currentPage.pageComponents">
+            <div ng-include="pageComponent.templateUrl" ng-init="myData = pageComponent" >
+            </div>
+        </div>
 
 
-<div ng-include="customer.footbar.templateUrl" ng-controller="indexCtrl"></div>
+<div ng-include="customer.footbar.templateUrl" ></div>
 
-<!-- JavaScript Files -->
-<script src="index_files/jquery_002.js"></script>
-<script src="index_files/bootstrap.js"></script>
-<script src="index_files/jquery_003.js"></script>
-<script src="index_files/jquery.js"></script>
-<script src="index_files/jquery_007.js"></script>
-<script src="index_files/supersized.js"></script>
-<script src="index_files/jquery_005.js"></script>
-<script src="index_files/jquery_006.js"></script>
-<script src="index_files/animations.js"></script>
-<script src="index_files/jquery_004.js"></script>
-<script src="index_files/main.js"></script>
+
 
 </body></html>

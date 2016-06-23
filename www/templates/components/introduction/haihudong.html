@@ -14,13 +14,11 @@ bgImage:"" 指定背景图片
 
 自定义样式和文案
 
-
-
 -->
 
 <!-- Intro top content -->
 <section class="intro" id="home">
-    <div class="cover" style="background-image: url({{scope.bgImage}})"></div>
+    <div class="cover" style="background-image: url({{myData.bgImage}})"></div>
     <div class="intro-body">
         <div class="container">
             <div class="row">
@@ -30,12 +28,12 @@ bgImage:"" 指定背景图片
                             <li class="" style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;">
                                 <h3 class="brand-heading" >We will design your future</h3>
                                 <div class="line"></div>
-                                <p class="intro-text yah" ng-bind="scope.summary1"></p>
+                                <p class="intro-text yah" ng-bind="myData.summary1"></p>
                             </li>
                             <li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; display: list-item;">
-                                <h3 class="brand-heading" ng-bind="scope.summary1"></h3>
+                                <h3 class="brand-heading" ng-bind="myData.summary1"></h3>
                                 <div class="line"></div>
-                                <p class="intro-text yah" ng-bind="scope.detail1"></p>
+                                <p class="intro-text yah" ng-bind="myData.detail1"></p>
                             </li>
                             <li class="" style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;">
                                 <h3 class="brand-heading">We will design your ideas</h3>
@@ -49,16 +47,6 @@ bgImage:"" 指定背景图片
         </div>
     </div>
 </section>
-<script>
-    function showMK(){
-        var num = $("#num").val();
-        $("#MK_"+num).css('display','block');
-        if(num == '3'){
-            $("#more").css('display','none');
-        }else{
-            $("#num").val(parseInt(num) + 1);
-        }
-    }
-</script>
+
 
 <!-- Intro top content -->
