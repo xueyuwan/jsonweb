@@ -4,7 +4,6 @@
 <!--[if gt IE 9]><!-->
 <html ng-app="app"><!--<![endif]--><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-
 	<!-- Meta -->
 	<meta charset="utf-8">
 	<meta name="keywords" content="{{default.keywords}}">
@@ -46,44 +45,14 @@
 <script src="js/app.js"></script>
 
 </head>
-<body  id="page-top" data-spy="scroll" data-target=".navbar-custom" onload="$('#num').val(1);">
+<body  id="page-top"  data-spy="{{!customer.navbar.scrollSpy}}||scroll" data-target=".navbar-custom" onload="$('#num').val(1);">
 
-<div class="body">
+<!--Navbar-->
+<div ng-include="customer.navbar.templateUrl"></div>
 
 
-
-<!-- Intro top content -->
-<section class="intro" id="home">
-	<div class="cover"></div>
-	<div class="intro-body">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 animated text-slide">
-					<div id="intro-slider" class="flexslider">
-						<ul class="slides">
-							<li class="" style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;">
-								<h3 class="brand-heading">We will design your future</h3>
-								<div class="line"></div>
-								<p class="intro-text yah">海互动是一家网站定制、APPS设计公司</p>
-							</li>
-							<li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; display: list-item;">
-								<h3 class="brand-heading">WE CREATE Digital Experience</h3>
-								<div class="line"></div>
-								<p class="intro-text yah">我们专注于品质和独特的解决方案</p>
-							</li>
-                            <li class="" style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;">
-								<h3 class="brand-heading">We will design your ideas</h3>
-								<div class="line"></div>
-								<p class="intro-text yah">我们用优秀的设计帮助企业形成有价值的品牌竞争力</p>
-							</li>
-						</ul>
-					<ul class="flex-direction-nav"><li><a class="flex-prev" href="#">Previous</a></li><li><a class="flex-next" href="#">Next</a></li></ul></div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- Intro top content -->
+<div ng-repeat="component in customer.components" ng-include="component.templateUrl" ng-init="scope=component">
+</div>
 
 <!-- Welcome content -->
 <section class="welcome-content">
@@ -611,17 +580,7 @@ posuere..</p>
 <script src="index_files/jquery_004.js"></script>
 <script src="index_files/main.js"></script>
 
-<script type="text/javascript">
-function showMK(){
-	var num = $("#num").val();
-	$("#MK_"+num).css('display','block');
-	if(num == '3'){
-		$("#more").css('display','none');
-	}else{
-		$("#num").val(parseInt(num) + 1);
-	}
-}
-</script>
+
 
 
 

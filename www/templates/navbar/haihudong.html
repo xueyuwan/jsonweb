@@ -1,13 +1,23 @@
-<!-- Header -->
+<!--
+海互动导航
+customer.json中定义
+
+"navbar": {"templateUrl":"templates/navbar/haihudong.html"}
+  自定义样式:
+  "navbarColor":"white"//导航背景颜色 默认黑色
+    "fontcolor":"black"   //字体暗色 默认白色
+    navbarImage:"url()"  //导航的背景图片 默认没有
+-->
+
 <header>
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="background-color: {{customer.navbar.navbarColor ||'black' }}   ">
         <div class="container">
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="#page-top">
-                    <i class="iconfont"></i><div class="logozi"><b>SEA</b><br>INTERACTION</div>
+                    <i class="iconfont text-hide" style="background-image:url({{default.logo}})">长度始终</i><div class="logozi"></div>
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -15,22 +25,22 @@
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="page-scroll active">
-                        <a href="#home">About</a>
+                        <a href="#home" style="color:{{customer.navbar.fontColor || 'white' }}">About</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#team">Team</a>
+                        <a href="#team" style="color:{{customer.navbar.fontColor || 'white' }}">Team</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#services">Services</a>
+                        <a href="#services" style="color:{{customer.navbar.fontColor || 'white' }}">Services</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">portfolio</a>
+                        <a href="#portfolio" style="color:{{customer.navbar.fontColor || 'white' }}">portfolio</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#testimonials">Client</a>
+                        <a href="#testimonials" style="color:{{customer.navbar.fontColor || 'white' }}">Client</a>
                     </li>
-                    <li class="page-scroll"> <a href="https://www.behance.net/seakong" target="_blank">Behance</a> </li>
-                    <li class="page-scroll">
+                    <li class="page-scroll"> <a href="https://www.behance.net/seakong" target="_blank" style="color:{{customer.navbar.fontColor || 'white' }}">Behance</a> </li>
+                    <li class="page-scroll" style="color:{{customer.navbar.fontColor || 'white' }}">
                         <a href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -40,4 +50,3 @@
         <!-- /.container -->
     </nav>
 </header>
-<!-- Header -->

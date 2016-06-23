@@ -1,3 +1,4 @@
-/**
- * Created by wac on 2016/6/22.
- */
+angular.module('app.route')
+.config(function(){
+
+});

@@ -1,3 +1,16 @@
 {
-  "dataType":"image"
+  "dataType":"customer setting",
+  "navbar": {
+    "templateUrl":"templates/navbar/haihudong.html",
+    "navbarColor":"black",
+    "fontColor":"white"
+  },
+  "components":[
+    {
+      "templateUrl":"templates/components/introduction/haihudong.html",
+      "summary1":"最具规模网站建设和系统开发",
+      "detail1":"The largest construction site",
+      "bgImage":"http://www.seakong.cn/demo/bg/1.jpg"
+    }
+  ]
 }
