@@ -1,16 +1,34 @@
 {
-  "dataType":"customer setting",
+  "dataType": "customer setting",
   "navbar": {
-    "templateUrl":"templates/navbar/haihudong.html",
-    "navbarColor":"black",
-    "fontColor":"white"
+    "templateUrl": "templates/navbar/haihudong.html",
+    "navbarColor": "black",
+    "fontColor": "white"
   },
-  "components":[
+  "footbar": {
+    "templateUrl": "templates/footbar/haihudong.html"
+  },
+  "pages": [
     {
-      "templateUrl":"templates/components/introduction/haihudong.html",
-      "summary1":"最具规模网站建设和系统开发",
-      "detail1":"The largest construction site",
-      "bgImage":"http://www.seakong.cn/demo/bg/1.jpg"
+      "index" : {
+        "components": [
+          {
+            "templateUrl": "templates/components/introduction/haihudong.html",
+            "summary1": "最具规模网站建设和系统开发",
+            "detail1": "The largest construction site",
+            "bgImage": "http://www.seakong.cn/demo/bg/1.jpg"
+          }
+        ]
+      },
+
+      "about": [
+        {
+          "templateUrl": "templates/components/about.html"
+
+        }
+      ]
+
+
     }
-  ]
+]
 }

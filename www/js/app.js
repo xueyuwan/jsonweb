@@ -5,7 +5,7 @@ var config = {
 };
 
 
-angular.module('app', ['ionic'])
+angular.module('app', ['ionic','app.route','app.controller'])
 
     .config(['$ionicConfigProvider', function($ionicConfigProvider) {
         $ionicConfigProvider.tabs.position('bottom'); // other values: top
