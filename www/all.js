@@ -1,8 +1,4 @@
-var config = {
-    localUrl : "data/",
-    serverUrl:"",
-    $http:undefined
-};
+
 //调试对象
 var rootScope;
 

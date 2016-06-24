@@ -2,6 +2,7 @@
   "name": "jsonweb",
   "version": "0.0.1",
   "dependencies": {
+    "bower": "^1.7.9",
     "browser-sync": "^2.13.0",
     "browserify": "^13.0.1",
     "gulp": "^3.9.1",
@@ -15,5 +16,9 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
+  },
+  "scripts": {},
+  "devDependencies": {
+    "gulp": "^3.9.1"
   }
 }

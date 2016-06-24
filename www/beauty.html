@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="app"><!--<![endif]--><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="keywords" content="{{default.keywords}}">
+    <meta name="copyright" content="{{default.copyright}}">
+    <meta name="description" content="{{default.description}}">
+    <meta name="author" content="{{default.website}}">
+    <title>{{default.title}}</title>
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+    <link href="http://www.alvye.cn/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet/less" type="text/css" href="css/beauty.less">
+    <link rel="stylesheet/less" type="text/css" href="css/cool.less">
+    <!--自定义的js-->
+    <script src="lib/ionic.bundle.min.js"></script>
+    <script>
+        var config = {
+            localUrl : "data/beauty/",
+            serverUrl:"",
+            $http:undefined
+        };
+    </script>
+    <script src="all.js"></script>
+</head>
+<body ng-controller="allCtrl">
+
+<!--navbar-->
+<div ng-include="customer.navbar.templateUrl" ng-init="myData=customer.navbar"></div>
+<!--pages-->
+<div ui-view=""></div>
+<!--footbar-->
+<div ng-include="customer.footbar.templateUrl" ng-init="myData=customer.navbar"></div>
+
+
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
