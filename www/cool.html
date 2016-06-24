@@ -7,7 +7,7 @@
     <meta name="copyright" content="{{default.copyright}}">
     <meta name="description" content="{{default.description}}">
     <meta name="author" content="{{default.website}}">
-   <title>{{default.title}}</title>
+    <title>{{default.title}}</title>
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicons -->
@@ -29,14 +29,14 @@
         };
     </script>
     <!--js文件夹下的所有文件-->
-  <script src="all.js"></script>
+    <script src="all.js"></script>
 </head>
 <body ng-controller="allCtrl">
 
 
 
 <!--navbar-->
-<div ng-include="customer.navbar.templateUrl" ng-init="myData=customer.navbar"></div>
+<div ng-include="customer.navbar.templateUrl" ng-init="myData = customer.navbar"></div>
 <!--pages-->
 <div ui-view=""></div>
 <!--footbar-->

@@ -1,8 +1,8 @@
 {
   "dataType": "customer setting",
   "navbar": {
-    "templateUrl": "templates/navbar/simple.html",
-    "componentStyle":"big",
+    "templateUrl": "templates/navbar/blog.html",
+    "componentStyle":"small",
     "navbarColor": "black",
     "fontColor": "white"
   },
